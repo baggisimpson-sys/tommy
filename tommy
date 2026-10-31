@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                git branch: 'main', credentialsId: '3281357f-1478-45df-a643-6eaf61fdd5fe', url: 'https://github.com/baggisimpson-sys/tom.git'
+            }
+        }
+    }
+}
